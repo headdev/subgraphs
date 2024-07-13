@@ -37,6 +37,7 @@ type Bundle @entity {
   nativePrice: BigDecimal!
 }
 
+
 type Token @entity {
   " Token address "
   id: ID!
@@ -138,6 +139,7 @@ type Pair @entity {
   " When this pair was created "
   createdAtTimestamp: BigInt!
 
+
   " Liquidity of first token "
   reserve0: BigInt!
   " Liquidity of second token "
@@ -172,6 +174,7 @@ type Pair @entity {
   aprUpdatedAtTimestamp: BigInt!
   " Transaction count "
   txCount: BigInt!
+
 
   " Liquidity Positions "
   liquidityPositions: [LiquidityPosition!]! @derivedFrom(field: "pair")
